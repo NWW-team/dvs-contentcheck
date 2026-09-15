@@ -3,6 +3,10 @@
 > **Status:** in uitvoering — fase 1
 > **Laatst bijgewerkt:** 2026-09-15
 > **Eigenaar:** `TODO: naam + rol`
+> **Toetsingskader:** Dienstverleningsstrategie NederlandWereldwijd (DVS),
+> vastgesteld 17-02-2025. Niet in deze repository opgenomen: dit is een openbare
+> repository en de DVS is een intern document. De eisen eruit staan hieronder
+> beschreven; de uitwerking in [`docs/dvs-meetlat.md`](docs/dvs-meetlat.md).
 >
 > Dit document beschrijft *waarom* dvs-contentcheck bestaat en *welke koers* we varen.
 > Het beschrijft niet hoe je het installeert of gebruikt — dat hoort in de README
@@ -10,21 +14,37 @@
 
 ## 1. Doel
 
-`TODO: één alinea. Wat moet dvs-contentcheck bereiken, in de taal van de
-opdrachtgever — niet in techniek. Bijvoorbeeld: "content vóór publicatie
-automatisch toetsen aan de DVS-richtlijnen, zodat redacteuren minder handmatig
-nakijken en fouten niet live gaan."`
+`dvs-contentcheck` maakt meetbaar of de content op www.nederlandwereldwijd.nl de
+beloften waarmaakt die NederlandWereldwijd doet in zijn Dienstverleningsstrategie.
 
-**Succes betekent:** `TODO: het meetbare gevolg. Bijv. "90% van de checks die
-redactie nu handmatig doet, gebeurt automatisch."`
+De DVS wijst de informatievoorziening — website en kennisbank — aan als
+**basisinspanning en eerste prioriteit**, en stelt dat die altijd actueel en juist
+moet zijn. Het doel voor 2030 is informatie die actueel, consistent en volledig is.
+Reisdocumenten (paspoort en ID-kaart) staan er als **verbeterprioriteit 2**; dat is
+niet toevallig de content waarmee dit project is begonnen.
+
+Die belofte controleren we niet met de hand maar met regels, zodat de redactie ziet
+waar de content afwijkt van wat is beloofd. Dat sluit aan op het DVS-uitgangspunt
+*sturen op basis van feiten*: pas als er een getal is, valt er op te sturen.
+
+**Succes betekent:** de redactie neemt bevindingen daadwerkelijk over, en de
+website-eisen uit de DVS zijn geen intentie meer maar een cijfer dat periodiek
+wordt gemeten. `TODO: welk cijfer is goed genoeg, en wie stelt dat vast?`
 
 ## 2. Probleem
 
 Wat er nu misgaat, en voor wie:
 
-- `TODO: probleem 1 — wie loopt hier tegenaan en wat kost het?`
-- `TODO: probleem 2`
-- `TODO: probleem 3`
+- **De belofte is niet meetbaar.** De DVS belooft actuele en juiste informatie als
+  eerste prioriteit, maar er is geen cijfer dat zegt hoe actueel of juist de
+  website op enig moment is. Zonder meting is "het is actueel" een aanname.
+- **De omvang past niet bij handwerk.** Alleen paspoort en ID-kaart telt al 741
+  pagina's en 477.787 woorden. De DVS stelt zelf vast dat tijd, geld en capaciteit
+  beperkt zijn; alles met de hand nalezen past daar niet in.
+- **Sjabloontekst vergroot elke fout.** Ruim 200 landpagina's delen dezelfde
+  zinnen: 156 zinnen staan op 100 of meer pagina's. Eén verouderde zin is daarmee
+  meteen een fout op honderden pagina's — en één correctie lost er net zoveel op.
+  Handmatig steekproeven nemen vindt precies dit patroon niet.
 
 **Hoe het nu gaat (huidige situatie):** `TODO: het bestaande proces, ook als dat
 "handmatig, per mail" is. Dit is de nulmeting waartegen we verbetering afmeten.`
@@ -60,9 +80,12 @@ Expliciet buiten scope houden is de helft van de strategie:
 
 | Wie | Wat ze nodig hebben | Hoe ze het gebruiken |
 | --- | --- | --- |
-| `TODO: bijv. redacteur` | `TODO` | `TODO` |
-| `TODO: bijv. eindredactie` | `TODO` | `TODO` |
-| `TODO: bijv. beheer/IT` | `TODO` | `TODO` |
+| Redacteur NWW | Weten wélke pagina's aandacht nodig hebben, en waarom | Opent het rapport, filtert op zekere fouten, past de tekst aan |
+| Contentregie / eindredactie | Zicht op patronen: welke sjabloonzin raakt honderden pagina's | Gebruikt de groepering om te prioriteren in plaats van pagina voor pagina |
+| Beleid en keten (HDCV, CSO, posten) | Signalen over wat structureel misgaat | Via de signaalfunctie uit de DVS; nog niet ingericht |
+
+`TODO: namen en rollen invullen — wie is de vaste gebruiker, en wie ontvangt de
+signalen richting beleid?`
 
 ## 5. Aanpak
 
@@ -120,7 +143,25 @@ staan als bestand in de repository, zodat je bij elke stap kunt zien wat eruit k
 
 ## 8. Meten
 
-Wat we volgen om te weten of dit werkt:
+### De meetlat: zes eisen uit de DVS
+
+De DVS stelt zes eisen aan de informatie op de website. Zo staat dit project ervoor:
+
+| Eis uit de DVS | Gedekt door de check? |
+| --- | --- |
+| Consistent | **Ja** — dit is precies wat de taalcheck meet |
+| Toegankelijk / begrijpelijk | **Deels** — lange zinnen en formele woorden; geen leesniveautoets |
+| Actueel | **Nee** — eerste prioriteit in de DVS, nog niet gebouwd |
+| Juist | **Nee** |
+| Volledig | **Nee** |
+| Correct doorverwijzen | **Nee** |
+
+Eén van de zes volledig gedekt. Dat is geen falen van het gebouwde, maar het
+plaatst het: de taalcheck raakt een echte DVS-eis, maar niet die welke de DVS zelf
+als basisinspanning aanwijst. Zie [`docs/dvs-meetlat.md`](docs/dvs-meetlat.md)
+voor de uitwerking en de eerste metingen op actualiteit.
+
+### Wat we volgen om te weten of dit werkt
 
 - **Aandeel bevindingen dat de redactie overneemt.** Dit is de maatstaf; zolang
   dit cijfer er niet is, is elke uitspraak over bruikbaarheid een gok.
@@ -167,3 +208,6 @@ Vastgestelde keuzes, met datum en reden. Zo blijft navolgbaar waarom iets zo is.
 | 15-09-2026 | De site geldt als zijn eigen norm | Meting liet zien dat een externe regellijst hier vooral ruis oplevert |
 | 15-09-2026 | Rapport als statische pagina via GitHub Pages | Er hoeft niets te worden opgeslagen; zonder opslag is een backend puur extra risico en toestemming |
 | 15-09-2026 | Ruwe HTML niet in de repository (±77 MB) | Opnieuw op te halen; de platte tekst is wat we controleren |
+| 15-09-2026 | De DVS is het toetsingskader, niet een losse schrijfwijzer | Maakt expliciet waaraan content wordt getoetst en wie daarover gaat |
+| 15-09-2026 | De DVS zelf niet in de repository opnemen | Dit is een openbare repository en de DVS is een intern document |
+| 15-09-2026 | Actualiteit wordt de volgende controle | De DVS noemt actueel en juist de basisinspanning en eerste prioriteit |
