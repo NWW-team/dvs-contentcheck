@@ -3,8 +3,9 @@
 
     python3 tools/rapport.py --datum 2026-09-15
 
-Leest `rapport/taalcheck.csv` en schrijft `docs/index.html`: één bestand
-zonder externe scripts, klaar om via GitHub Pages te publiceren.
+Leest de bevindingen van alle controles (`rapport/*.csv`) en schrijft
+`docs/index.html`: één bestand zonder externe scripts, klaar om via GitHub
+Pages te publiceren.
 
 Bevindingen met dezelfde tekst worden samengevoegd. Dat is geen cosmetica:
 ruim 200 landpagina's delen dezelfde sjabloontekst, dus één zin verbeteren
@@ -25,11 +26,18 @@ ERNST_LABEL = {
     "advies": "Advies",
 }
 SOORT_LABEL = {
+    # taalcheck
     "aanspreekvorm": "Aanspreekvorm",
     "schrijfwijze": "Schrijfwijze",
     "formeel-woord": "Formeel woord",
     "lijdende-vorm": "Lijdende vorm",
     "lange-zin": "Lange zin",
+    # actualiteitscheck
+    "doodlopende-verwijzing": "Doodlopende verwijzing",
+    "langdurig-tijdelijk": "Te lang tijdelijk",
+    "tijdelijk-zonder-datum": "Tijdelijk zonder datum",
+    "verlopen-aankondiging": "Verlopen aankondiging",
+    "verloopt-binnenkort": "Verloopt binnenkort",
 }
 
 
@@ -47,7 +55,7 @@ def groepeer(rijen):
     for g in groepen.values():
         # Eén pagina kan dezelfde fout twee keer bevatten. Meldingen tellen alle
         # keren, de paginalijst noemt elke pagina één keer; samen tellen de
-        # meldingen op tot precies het aantal regels in taalcheck.csv.
+        # meldingen op tot precies het aantal regels in de bronbestanden.
         g["meldingen"] = len(g["paginas"])
         uniek = {p["url"]: p for p in g["paginas"]}
         g["paginas"] = sorted(uniek.values(), key=lambda p: p["titel"])
@@ -90,7 +98,7 @@ TEMPLATE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Taalcheck paspoort en ID-kaart | NederlandWereldwijd</title>
+<title>Contentcheck paspoort en ID-kaart | NederlandWereldwijd</title>
 <style>
   :root {
     --tekst: #15202b; --zacht: #5b6b7c; --lijn: #d6dce2; --vlak: #fff;
@@ -166,9 +174,9 @@ TEMPLATE = """<!doctype html>
 <div class="wrap">
 
 <header>
-  <h1>Taalcheck: paspoort en ID-kaart</h1>
+  <h1>Contentcheck: paspoort en ID-kaart</h1>
   <p class="onder">
-    %(paginas)d pagina&#39;s van www.nederlandwereldwijd.nl gecontroleerd op taalgebruik.
+    %(paginas)d pagina&#39;s van www.nederlandwereldwijd.nl gecontroleerd.
     Content opgehaald op %(datum)s.
   </p>
 </header>
@@ -178,6 +186,11 @@ TEMPLATE = """<!doctype html>
   vatten als <strong>%(groepen)d unieke teksten</strong>. Veel landpagina&#39;s delen
   dezelfde sjabloontekst: &eacute;&eacute;n zin verbeteren verbetert soms honderden
   pagina&#39;s tegelijk.
+</p>
+<p class="onder">
+  Gecontroleerd op <strong>taalgebruik</strong> en op <strong>actualiteit en
+  doorverwijzing</strong> &mdash; twee eisen die de Dienstverleningsstrategie aan de
+  informatie op de website stelt.
 </p>
 
 <div class="cijfers">%(kaarten)s</div>
@@ -200,6 +213,17 @@ TEMPLATE = """<!doctype html>
     <li><strong>Formeel woord</strong> &mdash; ambtelijk woord met een gewoner alternatief</li>
     <li><strong>Lijdende vorm</strong> &mdash; wordt of worden plus voltooid deelwoord</li>
     <li><strong>Lange zin</strong> &mdash; zinnen langer dan 20 woorden</li>
+  </ul>
+  <p>
+    Daarnaast wordt gecontroleerd of informatie nog actueel is en of een klant die
+    hier niet geholpen wordt, weet waar dan wel:
+  </p>
+  <ul>
+    <li><strong>Doodlopende verwijzing</strong> &mdash; verwijst naar &#39;een omringend land&#39; zonder te zeggen welk</li>
+    <li><strong>Te lang tijdelijk</strong> &mdash; een tijdelijke mededeling met de datum erbij; de duur staat erbij, de grens trekt de redactie</li>
+    <li><strong>Tijdelijk zonder datum</strong> &mdash; niet te zien hoe lang het er al staat</li>
+    <li><strong>Verlopen aankondiging</strong> &mdash; een datum die voorbij is</li>
+    <li><strong>Verloopt binnenkort</strong> &mdash; een datum binnen 30 dagen</li>
   </ul>
   <h2>Wat hier niet in staat</h2>
   <p>
@@ -294,13 +318,20 @@ toon();
 
 def main():
     ap = argparse.ArgumentParser(description="Maak een webpagina van de bevindingen.")
-    ap.add_argument("--bevindingen", default="rapport/taalcheck.csv")
+    ap.add_argument("--bevindingen", nargs="+",
+                    default=["rapport/taalcheck.csv", "rapport/actualiteitscheck.csv"],
+                    help="een of meer CSV-bestanden met bevindingen")
     ap.add_argument("--crawl", default="data/paspoort-id-kaart/index.csv")
     ap.add_argument("--uit", default="docs/index.html")
     ap.add_argument("--datum", default="15 september 2026", help="datum van de crawl")
     args = ap.parse_args()
 
-    rijen = list(csv.DictReader(open(args.bevindingen, encoding="utf-8")))
+    rijen = []
+    for pad in args.bevindingen:
+        if not os.path.exists(pad):
+            print("overgeslagen (bestaat niet): %s" % pad)
+            continue
+        rijen.extend(csv.DictReader(open(pad, encoding="utf-8")))
     aantal_paginas = sum(1 for _ in csv.DictReader(open(args.crawl, encoding="utf-8")))
 
     os.makedirs(os.path.dirname(args.uit), exist_ok=True)

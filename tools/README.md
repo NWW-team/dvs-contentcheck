@@ -59,6 +59,25 @@ dat een probleem is en wat een alternatief is. Het uitgangspunt staat in
 [`../docs/taalcheck-plan.md`](../docs/taalcheck-plan.md): de site geldt als zijn
 eigen norm, dus we zoeken naar afwijkingen van hoe de rest van de site het doet.
 
+## `actualiteitscheck.py` — is de informatie nog actueel?
+
+```bash
+python3 tools/actualiteitscheck.py data/paspoort-id-kaart --out rapport
+```
+
+Toetst twee eisen uit de Dienstverleningsstrategie die de taalcheck niet dekt:
+informatie moet actueel zijn, en wie hier niet geholpen wordt moet weten waar
+dan wel. Vijf soorten bevindingen: doodlopende verwijzing, te lang tijdelijk,
+tijdelijk zonder datum, verlopen aankondiging en verloopt binnenkort.
+
+Met `--peildatum JJJJ-MM-DD` reken je tegen een andere datum dan vandaag —
+handig om te reproduceren wat de check op een eerdere dag zou hebben gemeld.
+
+De controle trekt zelf geen grens bij "tijdelijk": hij meldt hoeveel dagen een
+mededeling er al staat en laat de redactie beslissen. Wat er bewust *niet* wordt
+gemeld staat in [`../docs/actualiteitscheck-plan.md`](../docs/actualiteitscheck-plan.md)
+— dat is even bepalend als wat wel.
+
 ## `rapport.py` — maak er een webpagina van
 
 ```bash
@@ -66,7 +85,8 @@ python3 tools/rapport.py --datum "15 september 2026"
 ```
 
 Schrijft `docs/index.html`: één bestand zonder externe scripts, klaar voor
-GitHub Pages. Bevindingen met dezelfde tekst worden samengevoegd, met de lijst
+GitHub Pages. Leest standaard de bevindingen van álle controles; met
+`--bevindingen` kies je zelf welke bestanden meegaan. Bevindingen met dezelfde tekst worden samengevoegd, met de lijst
 pagina's waarop ze voorkomen — één sjabloonzin verbeteren verbetert soms
 honderden pagina's tegelijk.
 
