@@ -11,14 +11,16 @@ staat in [`docs/dvs-meetlat.md`](docs/dvs-meetlat.md).
 
 ## Wat er nu werkt
 
-741 pagina's over paspoort en ID-kaart zijn opgehaald en gecontroleerd op
-taalgebruik. Dat leverde 1.651 bevindingen op, samen te vatten als 439 unieke
-teksten — veel landpagina's delen dezelfde sjabloonzin, dus één zin verbeteren
-verbetert soms honderden pagina's tegelijk.
+741 pagina's over paspoort en ID-kaart zijn opgehaald en op twee dingen
+gecontroleerd: taalgebruik, en actualiteit en doorverwijzing. Dat leverde 1.730
+bevindingen op, samen te vatten als 461 unieke teksten — veel landpagina's delen
+dezelfde sjabloonzin, dus één zin verbeteren verbetert soms honderden pagina's
+tegelijk.
 
-Vier teksten zijn vrijwel zeker fout: een ontbrekend streepje in `ID kaart`, zes
-keer `Email` in plaats van `E-mail`, en twee plekken waar de lezer met `je` wordt
-aangesproken terwijl de site overal `u` gebruikt.
+Negen teksten zijn vrijwel zeker fout. De grootste: **21 pagina's verwijzen de
+klant door naar "een omringend land" zonder te zeggen welk land**. Verder onder
+meer een consulaat dat al 1.303 dagen "tijdelijk" gesloten is, een afspraakmoment
+dat is verlopen, en een ontbrekend streepje in `ID kaart`.
 
 ## Zelf draaien
 
@@ -34,8 +36,9 @@ python3 tools/crawl.py https://www.nederlandwereldwijd.nl \
     --urls-file data/paspoort-id-kaart/urls.txt \
     --max-pages 800 --delay 0.4 --out data/paspoort-id-kaart
 
-# 3. controleren op taalgebruik
+# 3. controleren op taalgebruik, en op actualiteit
 python3 tools/taalcheck.py data/paspoort-id-kaart --out rapport
+python3 tools/actualiteitscheck.py data/paspoort-id-kaart --out rapport
 
 # 4. er een webpagina van maken
 python3 tools/rapport.py --datum "15 september 2026"

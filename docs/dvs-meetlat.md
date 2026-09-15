@@ -24,21 +24,23 @@ Twee dingen uit de DVS bepalen de koers van dit project:
 
 | Eis | Wat het betekent | Stand |
 | --- | --- | --- |
-| **Actueel** | Informatie klopt nog op het moment dat de klant hem leest | **niet gedekt** |
+| **Actueel** | Informatie klopt nog op het moment dat de klant hem leest | **gedekt** door de actualiteitscheck |
 | **Juist** | Bedragen, termijnen en voorwaarden kloppen feitelijk | **niet gedekt** |
 | **Consistent** | Dezelfde vraag krijgt overal hetzelfde antwoord | **gedekt** door de taalcheck |
 | **Volledig** | De klant kan zijn zaak afmaken zonder elders te zoeken | **niet gedekt** |
 | **Toegankelijk / begrijpelijk** | Te volgen zonder voorkennis, in heldere stappen | **deels**: lange zinnen en formele woorden |
-| **Duidelijk over wat NWW niet doet, met een correcte doorverwijzing** | Een klant die hier niet geholpen wordt, weet waar dan wel | **niet gedekt** |
+| **Duidelijk over wat NWW niet doet, met een correcte doorverwijzing** | Een klant die hier niet geholpen wordt, weet waar dan wel | **gedekt** door de actualiteitscheck |
 
-Eén van de zes is volledig gedekt. De taalcheck raakt een echte eis — consistentie
-is een doelstelling voor 2030 — maar niet die welke de DVS zelf als eerste
-prioriteit aanwijst.
+Drie van de zes zijn gedekt, één deels. Wat overblijft is *juist* en *volledig*:
+of bedragen, termijnen en voorwaarden feitelijk kloppen, en of een klant zijn zaak
+kan afmaken. Dat is de volgende stap, en die valt samen met de vergelijking tussen
+landpagina's.
 
 ## Eerste metingen op actualiteit
 
-Nog geen controle, wel een indicatie van waar een actualiteitscheck op zou
-aanslaan. Gemeten op de 741 opgehaalde pagina's (peildatum 15 september 2026):
+Deze meting kwam vóór de controle en bepaalde het ontwerp ervan; zie
+[`actualiteitscheck-plan.md`](actualiteitscheck-plan.md) voor wat eruit volgde.
+Gemeten op de 741 opgehaalde pagina's (peildatum 15 september 2026):
 
 | Signaal | Aantal pagina's |
 | --- | --- |
@@ -54,9 +56,9 @@ ophopen: in de zinnen met het grootste bereik.
 
 De 130 pagina's die zeggen geen informatie te hebben verdienen aparte aandacht.
 Volgens de klantbelofte is dat juist goed — eerlijk zijn over wat NWW niet doet —
-**mits** er correct wordt doorverwezen. Of dat overal gebeurt, is nu niet
-gecontroleerd. Dat is de kern van een doorverwijscheck: staat er een werkende
-verwijzing, of loopt de klant dood?
+**mits** er correct wordt doorverwezen. Dat is inmiddels gecontroleerd: 109 van de
+130 noemen een concreet land, **21 niet**. Die 21 zeggen alleen "de informatie van
+een omringend land" en laten de klant doodlopen.
 
 ## Een keuze die de redactie moet maken
 
@@ -74,11 +76,11 @@ publiekscontent, dan is de regel onderbouwd in plaats van afgeleid.
 De DVS wijst zelf de volgorde aan. Actueel en juist zijn basisinspanning; daar
 begint de meeste winst. Concreet zijn dat twee controles:
 
-- **Actualiteitscheck** — vind tekst die veroudert: verlopen data, "tijdelijk" dat
-  er te lang staat, verwijzingen naar jaartallen die voorbij zijn.
+- ~~**Actualiteitscheck**~~ — gebouwd op 15 september 2026.
 - **Feitelijke consistentie tussen landpagina's** — vergelijk bedragen, termijnen
   en voorwaarden over de ruim 200 varianten, en meld waar de ene pagina is
-  bijgewerkt en de andere niet.
+  bijgewerkt en de andere niet. Dit dekt meteen *juist* én een deel van *volledig*,
+  de twee eisen die nu nog open staan.
 
 Die tweede dekt meteen een deel van "juist" én van "consistent", en sluit aan op
 wat de meting al liet zien: de fout zit zelden in één pagina, maar in een
