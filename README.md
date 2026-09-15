@@ -1,8 +1,11 @@
 # dvs-contentcheck
 
-Controleert de content van www.nederlandwereldwijd.nl vóór publicatie, zodat de
-redactie minder handmatig hoeft na te kijken. De tool adviseert; de redactie
-beslist.
+Controleert of de content van www.nederlandwereldwijd.nl de beloften waarmaakt uit
+de Dienstverleningsstrategie van NederlandWereldwijd: informatie die actueel,
+juist, consistent en begrijpelijk is. De tool adviseert; de redactie beslist.
+
+Welke eisen dat precies zijn en hoeveel ervan al gedekt zijn (één van de zes),
+staat in [`docs/dvs-meetlat.md`](docs/dvs-meetlat.md).
 
 **Het rapport:** https://nww-team.github.io/dvs-contentcheck/
 
