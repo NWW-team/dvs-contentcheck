@@ -1,0 +1,91 @@
+https://www.nederlandwereldwijd.nl/digid-buiten-nederland/inloggen-id-kaart
+Inloggen via DigiD met identiteitsbewijs vanuit het buitenland | NederlandWereldwijdTelefoon
+------------------------------------------------------------
+Woont u in het buitenland of in Caribisch Nederland? Lees hoe u inlogt via DigiD met uw Nederlandse identiteitsbewijs en wat u kunt doen als dit niet lukt. Bij nog geen enkele Nederlandse organisatie bent u verplicht om op deze manier in te loggen.
+
+Let op:
+Inloggen met uw identiteitsbewijs is niet hetzelfde als de ID-check in de DigiD app. Lees meer over de ID-check in de DigiD app.
+
+Hoe werkt het?
+Om in te loggen via DigiD met uw identiteitsbewijs, moet u uw identiteitsbewijs eerst activeren. Als u in het buitenland woont, kunt u alleen uw ID-kaart activeren.
+
+Wat heb ik nodig?
+
+Om in te loggen via DigiD met uw identiteitsbewijs heeft u nodig:
+Een geactiveerde DigiD app. Heeft u nog geen geactiveerde DigiD app? Lees hoe u de DigiD app activeert.
+Een geactiveerde ID-kaart, afgegeven op of na 13 maart 2021. Lees hieronder hoe u de inlogfunctie uw ID-kaart activeert.
+De pincode van uw ID-kaart. Deze ontvangt u per post nadat u een nieuwe ID-kaart heeft gekregen.
+Let op: U kunt geen rijbewijs met inlogfunctie aanvragen als u in het buitenland woont. Heeft u in Nederland een rijbewijs met inlogfunctie ontvangen? En bent u daarna naar het buitenland verhuisd? Dan kunt u uw rijbewijs met inlogfunctie blijven gebruiken.
+Verder heeft u nodig:
+Android telefoon of tablet met NFC-kaartlezer (Android-versie 7.0 of hoger)
+iPhone, model 7 of hoger (iOS-versie 12.2 of hoger)
+
+Hoe activeer ik mijn ID-kaart?
+
+Voordat u kunt inloggen met uw ID-kaart, moet u deze eerst activeren. Volg hiervoor de onderstaande stappen:
+Na het ophalen van uw nieuwe ID-kaart, ontvangt u een brief van DigiD met een pincode.
+Ga naar Mijn DigiD en activeer de inlogfunctie van uw ID-kaart met de pincode. U hoeft dit niet binnen een bepaalde tijd te doen.
+Wijzig de tijdelijke pincode in een eigen pincode die u zelf kiest.
+Correspondentieadres
+Vraagt u uw ID-kaart aan vanuit het buitenland? Dan kunt u de brief met pincode laten versturen naar een correspondentieadres. U geeft dit adres op bij de aanvraag van uw ID-kaart.
+Het correspondentieadres kan uw woonadres of een ander adres in het buitenland zijn, of een adres in Nederland. De brief wordt niet verstuurd naar een Nederlandse ambassade, consulaat-generaal of VFS Global.
+
+Hoe log ik in?
+
+Heeft u de inlogfunctie van uw identiteitsbewijs geactiveerd? Dan kunt u op 2 manieren inloggen met het identiteitsbewijs:
+Met de telefoon of tablet waarop uw DigiD app staat.
+Met een ander apparaat (bijvoorbeeld uw computer).
+Kies hoe u wilt inloggen:
+Inloggen met de telefoon of tablet waarop uw DigiD app staat
+Ga naar de website of de app van de organisatie waar u wilt inloggen.
+Klik op 'Inloggen met DigiD'.
+In het DigiD inlogscherm kiest u voor 'Met mijn identiteitskaart' of 'Met mijn rijbewijs'.
+Kies voor 'Op dit apparaat'.
+Bevestig in de DigiD app waar u wilt inloggen door te kiezen voor 'Inloggen'.
+De DigiD app vraagt u uw identiteitsbewijs tegen de achterkant van de telefoon te houden. De app scant zo de gegevens van de chip op het identiteitsbewijs.
+Tijdens het scannen van uw identiteitsbewijs controleert DigiD of het document van u is en geldig is. Er worden geen gegevens opgeslagen.
+De app vraagt u de persoonlijke pincode die hoort bij uw identiteitsbewijs in te voeren.
+Hierna vraagt de app u nog een keer om uw identiteitsbewijs tegen de achterkant van uw telefoon te houden.
+U bent ingelogd.
+Inloggen met een ander apparaat (bijvoorbeeld uw computer)
+Ga naar de website of de app van de organisatie waar u wilt inloggen.
+Klik op 'Inloggen met DigiD'.
+In het DigiD inlogscherm kiest u voor 'Met mijn identiteitskaart' of 'Met mijn rijbewijs'.
+Kies voor 'Op een mobiel apparaat met NFC-lezer'.
+Open de DigiD app op uw mobiele apparaat en voer de pincode van uw DigiD app in.
+Druk op de oranje knop 'Koppelcode'.
+Voer de koppelcode in op het scherm van uw computer en klik op 'Volgende'.
+Scan met de DigiD app de QR-code die op het scherm van uw computer komt.
+Bevestig in de DigiD app waar u wilt inloggen door te kiezen voor 'Inloggen'.
+De DigiD app vraagt u uw identiteitsbewijs tegen de achterkant van de telefoon te houden. De app scant zo de gegevens van de chip op uw identiteitsbewijs.
+Tijdens het scannen van uw identiteitsbewijs controleert DigiD of het document van u is en geldig is. Er worden geen gegevens opgeslagen.
+De app vraagt u de persoonlijke pincode die hoort bij uw identiteitsbewijs in te voeren.
+Hierna vraagt de app u nog een keer uw identiteitskaart tegen de achterkant van uw telefoon te houden.
+U bent ingelogd.
+
+Hulp nodig?
+Bent u de brief met de pincode kwijt? Heeft u de brief nooit ontvangen? Of bent u de pincode van uw identiteitsbewijs vergeten? Neem contact op met de helpdesk van DigiD.
+
+Helpdesk van DigiD
+
+Neem contact op met de helpdesk van DigiD
+
++31 88 123 65 55
+
+Op werkdagen van 8.00 tot 22.00 uur (Nederlandse tijd). Op zaterdag van 9.00 tot 17.00 uur (Nederlandse tijd).
+
+Contactformulier
+
+Stel uw vraag via het contactformulier
+
+Niet verplicht in Nederland
+Bij nog geen enkele Nederlandse organisatie bent u verplicht om in te loggen met uw identiteitsbewijs. U kunt ook altijd op een andere manier inloggen. Bijvoorbeeld met de DigiD app.
+Lees meer over inloggen met de DigiD app
+Inloggen in andere Europese landen
+Wilt u met DigiD inloggen bij (overheids)organisaties in andere Europese landen? Dan moet u soms wel inloggen met uw identiteitsbewijs.
+Lees meer over Europees inloggen met DigiD
+Contact
+Komt u er niet uit? Wij helpen u graag verder.
+Neem contact op met ons
+Ook nuttig
+Stappenplan DigiD aanvragen
