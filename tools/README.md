@@ -43,6 +43,33 @@ terug op de hele body.
 - **Bestand tegen afbreken.** `index.csv` wordt na elke pagina bijgewerkt, dus
   een onderbroken run levert nog steeds bruikbaar materiaal op.
 
+## `taalcheck.py` — controleer de teksten
+
+```bash
+python3 tools/taalcheck.py data/paspoort-id-kaart --out rapport
+```
+
+Levert `rapport/taalcheck.csv` (alle bevindingen) en `rapport/taalcheck.md`
+(samenvatting). Vijf controles: aanspreekvorm, schrijfwijze, formeel woord,
+lijdende vorm en lange zinnen. Met `--max-woorden` stel je in vanaf wanneer een
+zin als lang telt (standaard 20).
+
+Elke bevinding vermeldt het citaat in zijn zin, welke regel is geraakt, waarom
+dat een probleem is en wat een alternatief is. Het uitgangspunt staat in
+[`../docs/taalcheck-plan.md`](../docs/taalcheck-plan.md): de site geldt als zijn
+eigen norm, dus we zoeken naar afwijkingen van hoe de rest van de site het doet.
+
+## `rapport.py` — maak er een webpagina van
+
+```bash
+python3 tools/rapport.py --datum "15 september 2026"
+```
+
+Schrijft `docs/index.html`: één bestand zonder externe scripts, klaar voor
+GitHub Pages. Bevindingen met dezelfde tekst worden samengevoegd, met de lijst
+pagina's waarop ze voorkomen — één sjabloonzin verbeteren verbetert soms
+honderden pagina's tegelijk.
+
 ### Netwerk
 
 Deze omgeving mag alleen naar domeinen die in het netwerkbeleid staan; andere
