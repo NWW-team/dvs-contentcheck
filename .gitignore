@@ -1,0 +1,6 @@
+# Ruwe HTML van een crawl: groot en makkelijk opnieuw op te halen.
+# De platte tekst en index.csv staan wél in de repo.
+data/**/pages/*.html
+
+__pycache__/
+*.pyc
